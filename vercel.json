@@ -7,12 +7,12 @@
       "use": "@vercel/static"
     },
     {
-      "src": "admin/admin.html",
+      "src": "src/admin/view/admin.html",
       "use": "@vercel/static",
       "config": { "distDir": "admin" }
     },
     {
-      "src": "customer/customer.html",
+      "src": "src/customer/customer.html",
       "use": "@vercel/static",
       "config": { "distDir": "customer" }
     }
