@@ -3,6 +3,10 @@
   "name": "capstone-project",
   "builds": [
     {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
       "src": "admin/admin.html",
       "use": "@vercel/static",
       "config": { "distDir": "admin" }
