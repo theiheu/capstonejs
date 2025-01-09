@@ -1,6 +1,6 @@
 
 import { Service } from "../services/phoneService.js";
-import { CartItem } from "../model/cartItem.js";
+// import { CartItem } from "../model/cartItem.js";
 import { Product } from "../model/product.js";
 document.addEventListener(
   "contextmenu",
