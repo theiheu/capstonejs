@@ -345,20 +345,6 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script>
-      // toggle shopping cart
-      $(".js-toggle-cart, .cart__overlay").on("click", function () {
-        $(".cart").toggleClass("is-hidden");
-      });
-      // change nav bar color when scroll
-      $(window).on("scroll", function () {
-        if (this.scrollY > 100) {
-          $("nav").addClass("black");
-        } else {
-          $("nav").removeClass("black");
-        }
-      });
-    </script>
     <script type="module" src="../controllers/main.js"></script>
   </body>
 </html>

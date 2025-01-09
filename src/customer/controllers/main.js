@@ -1,3 +1,7 @@
+
+import { Service } from "../services/phoneService.js";
+import { CartItem } from "../model/cartItem.js";
+import { Product } from "../model/product.js";
 document.addEventListener(
   "contextmenu",
   function (e) {
@@ -17,11 +21,21 @@ document.onkeydown = function (event) {
   }
 };
 
+  // toggle shopping cart
+      $(".js-toggle-cart, .cart__overlay").on("click", function () {
+        $(".cart").toggleClass("is-hidden");
+      });
+      // change nav bar color when scroll
+      $(window).on("scroll", function () {
+        if (this.scrollY > 100) {
+          $("nav").addClass("black");
+        } else {
+          $("nav").removeClass("black");
+        }
+      });
+
 const getEle = (id) => document.getElementById(id);
 
-import { Service } from "../services/phoneService.js";
-import { CartItem } from "../model/cartItem.js";
-import { Product } from "../model/product.js";
 
 const service = new Service();
 let cart = [];
@@ -49,7 +63,7 @@ const renderList = (phoneList) => {
               ele.frontcameraSP
             }</span>
           </div>
-  
+
           <p class = 'pt-5'><u>click here for more details</u></p>
         </div>
         <div class="card-body">
@@ -90,7 +104,7 @@ const renderCart = (cart) => {
     content += `<div class="product">
     <div class="product__1">
       <div class="product__thumbnail">
-        <img src=${ele.product.imgSP} 
+        <img src=${ele.product.imgSP}
           alt="Italian Trulli">
       </div>
       <div class="product__details">
